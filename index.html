@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJ TECH</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh;
+        }
+        .divbody1 {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 45%;
+            overflow: hidden;
+        }
+        .divbody2 {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* display: flex; */
+            height: 45%;
+            /* overflow: hidden; */
+        }
+        .divbody3 {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 10%;
+            background-color: white;
+            position: relative;
+            justify-content: center;
+            align-items: start;
+            text-align: center;
+            padding: 50px;
+            overflow: auto;
+        }
+        .left {
+            width: 50%;
+            background-color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: auto;
+        }
+        .right {
+            width: 50%;
+            background-color: #003366;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            text-align: left;
+            padding: 40px;
+            overflow: auto;
+        }
+        .desc-top {
+            height: 46%;
+            background-color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            padding-bottom: 0px;
+            overflow: auto;
+        }
+        .desc-top-right {
+            width: 46%;
+            color: #003366;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: auto;
+        }
+        .desc-top-right-top {
+            height: 50%;
+            color: #003366;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            /* padding: 20px; */
+            padding-left: 0;
+            overflow: auto;
+        }
+        .desc-top-right-bottom {
+            height: 50%;
+            color: #003366;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            /* padding: 20px; */
+            padding-left: 0;
+            overflow: auto;
+        }
+        .desc-top-left {
+            width: 50%;
+            color: #003366;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: auto;
+        }
+        .desc-bottom {
+            height: 46%;
+            background-color: #003366;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            padding-top: 0px;
+            overflow: auto;
+        }
+        
+        .desc-bottom-right {
+            width: 50%;
+            color: white;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: auto;
+        }
+        .desc-bottom-right-top {
+            height: 50%;
+            color: white;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            /* padding: 20px; */
+            padding-left: 0;
+            overflow: auto;
+        }
+        .desc-bottom-right-bottom {
+            height: 50%;
+            color: white;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            /* padding: 20px; */
+            padding-left: 0;
+            overflow: auto;
+        }
+        .desc-bottom-left {
+            width: 50%;
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: auto;
+        }
+        .desc-last-top {
+            height: 35%;
+            background-color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            overflow: auto;
+        }
+        .desc-last-bottom {
+            height: 65%;
+            background-color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            text-align: center;
+            padding: 0;
+            overflow: auto;
+        }
+        .desc-last-bottom-left {
+            width: 45%;
+            background-color: white;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            overflow: auto;
+        }
+        .desc-last-bottom-right {
+            width: 55%;
+            background-color: white;
+            position: relative;
+            justify-content: center;
+            align-items: start;
+            text-align: left;
+            padding: 0;
+            overflow: auto;
+        }
+        .content {
+            max-width: 80%;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+        .triangle {
+            position: absolute;
+            left: 50%;
+            width: 50%;
+            max-width: 300px;
+            height: auto;
+            transform: translateX(-50%);
+        }
+        .triangle-top {
+            top: 0;
+        }
+        .triangle-bottom {
+            bottom: 0;
+        }
+        .h1-white {
+            color: #ffffff;
+            font-size: 72px;
+            font-weight: bold;
+            margin: 1%;
+            /* margin-bottom: 0.5%; */
+            /* margin-top: 5%; */
+        }
+        .h1-navy {
+            color: #003366;
+            font-size: 72px;
+            font-weight: bold;
+            margin: 1%;
+            /* margin-bottom: 0.5%; */
+            /* margin-top: 5%; */
+        }
+        .h2-white {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .h2-navy {
+            color: #003366;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0
+        }
+        p {
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+        @media (max-width: 768px) {
+            .divbody1 {
+                flex-direction: column;
+            }
+            .left, .right {
+                width: 100%;
+                height: 50vh;
+            }
+            .triangle {
+                visibility: hidden;
+            }
+            .desc-top {
+                flex-direction: column;
+            }
+            .desc-top-right {
+                width: 100%;
+                height: 50vh;
+            }
+            .desc-top-left {
+                width: 100%;
+                height: 50vh;   
+            }
+            .desc-bottom {
+                flex-direction: column;
+            }
+            .desc-bottom-right {
+                width: 100%;
+                height: 50vh;
+            }
+            .desc-bottom-left {
+                width: 100%;
+                height: 50vh;   
+            }
+            .desc-top-right-top .h2-white {
+                font-size: 16px;
+            }
+            .desc-top-right-top .h2-navy {
+                font-size: 16px;
+            }
+            .h1-white {
+                font-size: 34px;
+            }
+            .h1-navy {
+                font-size: 34px;
+            }
+            .h2-white {
+                font-size: 20px;
+            }
+            .h2-navy {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="divbody1">
+        <div class="left">
+            <svg class="triangle triangle-top" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet">
+                <polygon points="0,0 50,50 100,0" fill="#003366"/>
+            </svg>
+            <div class="content">
+                <img src="tjtech_logo.jpg" alt="설명 이미지">
+            </div>
+            <svg class="triangle triangle-bottom" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet">
+                <polygon points="0,50 50,0 100,50" fill="#003366"/>
+            </svg>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h1 class="h1-white">TJ TECH</h1>
+                <h2 class="h2-white">Product name here (WS-C2960)</h2>
+                <ul>
+                    <li>16-Gbps switching fabric (Catalyst 2960PD-8TT-L, Catalyst 2960-8TC-L, Catalyst 2960-24TT-L, Catalyst 2960-24TC-L, Catalyst 2960-24LT-L, Catalyst 2960-24PC-L, Catalyst 2960-48PST-L, Catalyst 2960-48TT-L, Catalyst 2960-48TC-L)</li>
+                    <li>32-Gbps switching fabric (Catalyst 2960G-8TC-L, Catalyst 2960G-24TC-L, Catalyst 2960G-48TC-L)</li>
+                    <li>Forwarding rate based on 64-byte packets: 2.7 mpps</li>
+                    <li>64 MB DRAM</li>
+                    <li>32 MB flash memory</li>
+                    <li>Configurable up to 8000 MAC addresses</li>
+                    <li>Configurable up to 255 Internet Group Management Protocol (IGMP) groups</li>
+                    <li>Configurable maximum transmission unit (MTU) of up to 9000 bytes</li>
+                    <li>Ethernet frame size of 9018 bytes (jumbo frames) for bridging on Gigabit Ethernet ports</li>
+                    <li>Up to 1998 bytes for bridging of Multiprotocol Label Switching (MPLS) tagged frames on both 10/100 and 10/100/1000 ports</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="divbody2">
+        <div class="desc-top">
+            <div class="desc-top-left">
+                <h1 class="h1-navy">배송</h1>
+            </div>
+            <div class="desc-top-right">
+                <div class="desc-top-right-top">
+                    <h2 class="h2-navy">국내 재고보유 물품</h2>
+                    <h2 class="h2-navy">배송 기간 2~3일</h2>
+                    <h2 class="h2-navy">배송 방법: 국내 택배</h2>
+                </div>
+                <div class="desc-top-right-bottom">
+                    <p>배송은 국내 택배로 진행되며 포장 및 준비기간 1일 배송기간 2~3일정도 소요됩니다.</p>
+                </div>                
+            </div>
+        </div>
+        <div class="desc-bottom">
+            <div class="desc-bottom-left">
+                <h1 class="h1-white">워렌티</h1>
+            </div>
+            <div class="desc-bottom-right">
+                <div class="desc-bottom-right-top">
+                    <h2 class="h2-white">1년 워랜티 제공</h2>
+                </div>
+                <div class="desc-bottom-right-bottom">
+                    <p>구매후 1년안에 제품에 문제가 생기면 문제가 되는 부분의
+                        로그파일 또는 사진을 제공받고 새제품으로 교체 해드리거나
+                        무상으로 수리해 드립니다.</p>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <div class="divbody3">
+        <div class="desc-last-top">
+            <h2 class="h2-navy"
+            >구입전에 상세정보에 대해선 문의 부탁드립니다.</h2>
+        </div>
+        <div class="desc-last-bottom">
+            <div class="desc-last-bottom-left"></div>
+            <div class="desc-last-bottom-right">
+                <p><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" fill="#1C274C"/>
+                    </svg>&nbsp;010 8649 6154</p>
+                <p><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#080341"/>
+                    </svg>&nbsp;easy431@gmail.com</p>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>
